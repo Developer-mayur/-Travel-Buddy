@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel UI - JavaScript Only</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <script>  
+    const mainContent = document.createElement('div');
+    Object.assign(mainContent.style, {
+      display: 'flex',
+      flex: '1',
+      backgroundColor: 'white',
+    });
+
+    // Left section
+    const leftSection = document.createElement('div');
+    Object.assign(leftSection.style, {
+      flex: '1',
+      padding: '20px',
+      backgroundColor: '#f0f7ff',
+    });
+    leftSection.innerHTML = `
+      <h2 style="color: #3f51b5; font-size: 22px; margin-bottom: 15px;">Find Your Stay</h2>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <input type="text" placeholder="Krabi Thailand" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
+        <button style="padding: 10px 20px; background-color: #3f51b5; color: white; border: none; border-radius: 10px; cursor: pointer;">Search</button>
+      </div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <input type="date" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
+        <input type="date" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
+      </div>
+      <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+        <input type="text" placeholder="1 Adult, 0 Children, 1 Room" style="flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ddd;">
+      </div>
+      <h2 style="color: #3f51b5; font-size: 22px; margin-bottom: 15px;">Popular Stays</h2>
+    `;
+
+    const popularStays = [
+      { name: "Kantiang View Resort", price: "$25 / night" },
+      { name: "Ocean front villa", price: "$60 / night" },
+      { name: "Petra Gloriyo Villa", price: "$45 / night" }
+    ];
+
+    popularStays.forEach(stay => {
+      const stayDiv = document.createElement('div');
+      Object.assign(stayDiv.style, {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        padding: '10px',
+        backgroundColor: '#fff',
+        borderRadius: '15px',
+        marginBottom: '15px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      });
+      stayDiv.innerHTML = `
+        <img src="https://via.placeholder.com/50" alt="Stay Image" style="width: 50px; height: 50px; border-radius: 10px;">
+        <div style="color: #333;">
+          <div>${stay.name}</div>
+          <small>${stay.price}</small>
+        </div>
+      `;
+      leftSection.appendChild(stayDiv);
+    });
+
+    mainContent.appendChild(leftSection);
+
+    // Right section
+    const rightSection = document.createElement('div');
+    Object.assign(rightSection.style, {
+      flex: '1',
+      backgroundImage: 'url("https://via.placeholder.com/500")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      color: 'white',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '20px',
+    });
+    rightSection.innerHTML = `
+      <h1 style="font-size: 40px; margin-bottom: 10px;">Live as if<br>The Paradise<br>is on earth.</h1>
+      <button style="padding: 10px 20px; background-color: rgba(255, 255, 255, 0.3); border: 1px solid white; color: white; border-radius: 10px; cursor: pointer;">Plan a trip</button>
+    `;
+
+    mainContent.appendChild(rightSection);
+
+    container.appendChild(mainContent);
+  </script>
+
+</body>
+</html>

@@ -1,112 +1,90 @@
 let locationList = [
-    {
-      "id": 1,
-      "title": "Essence Mascara Lash Princess",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-      "images": "https://www.holidify.com/images/cmsuploads/compressed/3551_20190228103219.jpg",
-        
-      "a": "https://batch-10.netlify.app/#topSection"
- 
+  {
+    "id": 1,
+    "title": "Essence Mascara Lash Princess",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://www.holidify.com/images/cmsuploads/compressed/3551_20190228103219.jpg",
+    "rating": "⭐️⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 2,
+    "title": "Eyeshadow Palette with Mirror",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/564x/36/c1/68/36c168dc2ff64fd2da8d1779fb8162a5.jpg",
+    "rating": "⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 3,
+    "title": "Powder Canister",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/564x/bf/19/3b/bf193b0d26708c465e9e7a90cf458e52.jpg",
+    "rating": "⭐️⭐️⭐️"
+  },
+  {
+    "id": 4,
+    "title": "Red Lipstick",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/236x/6c/17/8c/6c178c3111d02f6a4fce22ba9f1b45b6.jpg",
+    "rating": "⭐️⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 5,
+    "title": "Essence Mascara Lash Princess",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg",
+    "rating": "⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 6,
+    "title": "Eyeshadow Palette with Mirror",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/236x/74/df/a1/74dfa1e0f9a9fcfec96b6e01e91c09cd.jpg",
+    "rating": "⭐️⭐️⭐️"
+  },
+  {
+    "id": 7,
+    "title": "Powder Canister",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/236x/a8/48/c4/a848c4e41f714bbabd02e0dee8e4c409.jpg",
+    "rating": "⭐️⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 8,
+    "title": "Red Lipstick",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/564x/3f/d2/22/3fd22298f59ca62d156d839e9ac25c56.jpg",
+    "rating": "⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 9,
+    "title": "Essence Mascara Lash Princess",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/564x/b6/8b/bf/b68bbfafc5c1d3a98d39d83a13b1d1d6.jpg",
+    "rating": "⭐️⭐️⭐️"
+  },
+  {
+    "id": 10,
+    "title": "Eyeshadow Palette with Mirror",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://www.fabhotels.com/blog/wp-content/uploads/2019/04/Bada-Ganapati-Temple.jpg",
+    "rating": "⭐️⭐️⭐️⭐️⭐️"
+  },
+  {
+    "id": 11,
+    "title": "Powder Canister",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/236x/d2/73/4a/d2734af1779523173c60da682b6cd0e7.jpg",
+    "rating": "⭐️⭐️⭐️"
+  },
+  {
+    "id": 12,
+    "title": "Red Lipstick",
+    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "images": "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg",
+    "rating": "⭐️⭐️⭐️⭐️"
+  }
+];
 
-    },
-    {
-      "id": 2,
-      "title": "Eyeshadow Palette with Mirror",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": "https://i.pinimg.com/564x/36/c1/68/36c168dc2ff64fd2da8d1779fb8162a5.jpg"
-
-       
-    },
-    {
-      "id": 3,
-      "title": "Powder Canister",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/564x/bf/19/3b/bf193b0d26708c465e9e7a90cf458e52.jpg"
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Red Lipstick",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/236x/6c/17/8c/6c178c3111d02f6a4fce22ba9f1b45b6.jpg"
-      ]
-    } ,   {
-      "id": 5,
-      "title": "Essence Mascara Lash Princess",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg"
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Eyeshadow Palette with Mirror",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/236x/74/df/a1/74dfa1e0f9a9fcfec96b6e01e91c09cd.jpg"
-      ]
-    },
-    {
-      "id": 7,
-      "title": "Powder Canister",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/236x/a8/48/c4/a848c4e41f714bbabd02e0dee8e4c409.jpg"
-      ]
-    },
-    {
-      "id": 8,
-      "title": "Red Lipstick",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/564x/3f/d2/22/3fd22298f59ca62d156d839e9ac25c56.jpg"
-      ]
-    },  {
-      "id": 9,
-      "title": "Essence Mascara Lash Princess",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/564x/b6/8b/bf/b68bbfafc5c1d3a98d39d83a13b1d1d6.jpg"
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Eyeshadow Palette with Mirror",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        " https://www.fabhotels.com/blog/wp-content/uploads/2019/04/Bada-Ganapati-Temple.jpg"
-      ]
-    },
-    {
-      "id": 11,
-      "title": "Powder Canister",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/236x/d2/73/4a/d2734af1779523173c60da682b6cd0e7.jpg"
-      ]
-    },
-    {
-      "id": 12,
-      "title": "Red Lipstick",
-      "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-
-      "images": [
-        "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg"
-      ]
-    },  
-  ];
   
   
  
@@ -147,13 +125,13 @@ function UI() {
 
     const sidebarItems = [
         { icon: '🏠', label: 'Home' },
-        { icon: '♥️', label: 'Favorites' },
-        { icon: '📰', label: 'News' },
+        { icon: '📰', label: 'News' },     
         { icon: '👨🏻‍💼', label: 'Profile' },
         { icon: '⚙', label: 'Settings' }
     ];
 
-    sidebarItems.forEach(item => {
+
+   for (const item of sidebarItems) {
         const iconContainer = document.createElement('div');
         iconContainer.style.display = 'flex';
         iconContainer.style.flexDirection = 'column';
@@ -203,7 +181,7 @@ function UI() {
         iconContainer.appendChild(iconDiv);
         iconContainer.appendChild(labelDiv);
         sidebar.appendChild(iconContainer);
-    });
+    }
     
 
     //    Main 
@@ -231,6 +209,9 @@ function UI() {
     searchInput.style.border = '1px solid #ddd';
     searchInput.style.borderRadius = '20px';
     header.appendChild(searchInput);
+
+
+    
 
     // Stories  
     const stories = document.createElement('div');
@@ -268,18 +249,156 @@ function UI() {
       p.innerHTML = element.paragraph;
       cbody.appendChild(p);
   
+      
       let a = document.createElement("a");
       a.setAttribute("class","btn btn-primary");
       a.setAttribute("style", "width:  100%");  
       a.innerHTML = "Visit here";
-      if(a.click){
-         a.href = "https://batch-10.netlify.app/#topSection";
 
 
 
-         
 
-      }
+      //new tab
+      a.addEventListener('click', () => {
+         mainContent.innerHTML = "";
+        
+         const detailView = document.createElement('div');
+        detailView.style.padding = '20px';
+        detailView.style.borderRadius = '20px';
+        detailView.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        detailView.style.backgroundColor = '#ffffff';
+        detailView.style.maxWidth = '400px';
+        detailView.style.margin = '0 auto';
+    
+        // Image
+        const img = document.createElement('img');
+        img.src = element.images;
+        img.style.width = '100%';
+        img.style.height = '200px';
+        img.style.borderTopLeftRadius = '20px';
+        img.style.borderTopRightRadius = '20px';
+        img.style.objectFit = 'fill';
+        detailView.appendChild(img);
+    
+
+        
+        const titleSection = document.createElement('div');
+        titleSection.style.padding = '20px';
+    
+        const title = document.createElement('h2');
+        title.textContent = element.title;
+        title.style.margin = '0';
+        title.style.fontSize = '24px';
+        title.style.fontWeight = 'bold';
+        titleSection.appendChild(title);
+    
+
+        //location
+        const location = document.createElement('p');
+        location.style.display = 'flex';
+        location.style.alignItems = 'center';
+        location.style.color = '#555';
+        location.innerHTML = `<i class="fa fa-map-marker" aria-hidden="true" style="color: blue; margin-right: 5px;"></i> Da Nang, Viet Nam`;
+        titleSection.appendChild(location);
+    
+        // Rating
+        const rating = document.createElement('p');
+        rating.innerHTML =element.rating;
+        titleSection.appendChild(rating);
+    
+        detailView.appendChild(titleSection);
+    
+        // About section
+        const aboutSection = document.createElement('div');
+        aboutSection.style.padding = '0 20px 20px 20px';
+    
+        const aboutTitle = document.createElement('h3');
+        aboutTitle.textContent = 'About';
+        aboutTitle.style.fontSize = '18px';
+        aboutTitle.style.marginBottom = '5px';
+        aboutSection.appendChild(aboutTitle);
+    
+        const aboutText = document.createElement('p');
+        aboutText.textContent = element.paragraph;
+        aboutText.style.fontSize = '14px';
+        aboutText.style.lineHeight = '1.5';
+        aboutSection.appendChild(aboutText);
+    
+        detailView.appendChild(aboutSection);
+    
+        // Including Services
+        const servicesSection = document.createElement('div');
+        servicesSection.style.padding = '0 20px 20px 20px';
+    
+        const servicesTitle = document.createElement('h3');
+        servicesTitle.textContent = 'Including Services';
+        servicesTitle.style.fontSize = '18px';
+        servicesTitle.style.marginBottom = '5px';
+        servicesSection.appendChild(servicesTitle);
+    
+        const servicesText = document.createElement('p');
+        servicesText.textContent = 'Air ticket, train ticket, 3 star hotel, buffet...';
+        servicesText.style.fontSize = '14px';
+        servicesText.style.lineHeight = '1.5';
+        servicesSection.appendChild(servicesText);
+    
+        detailView.appendChild(servicesSection);
+    
+        // Date, Guide, Nights
+        const optionsSection = document.createElement('div');
+        optionsSection.style.display = 'flex';
+        optionsSection.style.justifyContent = 'space-around';
+        optionsSection.style.padding = '10px 20px';
+    
+        const dateOption = document.createElement('div');
+        dateOption.textContent = '16-20 Nov';
+        dateOption.style.backgroundColor = '#f0f0f0';
+        dateOption.style.padding = '5px 10px';
+        dateOption.style.borderRadius = '5px';
+        optionsSection.appendChild(dateOption);
+    
+        const guideOption = document.createElement('div');
+        guideOption.textContent = '3 Tour guide';
+        guideOption.style.backgroundColor = '#f0f0f0';
+        guideOption.style.padding = '5px 10px';
+        guideOption.style.borderRadius = '5px';
+        optionsSection.appendChild(guideOption);
+    
+        const nightsOption = document.createElement('div');
+        nightsOption.textContent = '4 Nights';
+        nightsOption.style.backgroundColor = '#f0f0f0';
+        nightsOption.style.padding = '5px 10px';
+        nightsOption.style.borderRadius = '5px';
+        optionsSection.appendChild(nightsOption);
+    
+        detailView.appendChild(optionsSection);
+    
+        // Price and Book Now button
+        const footerSection = document.createElement('div');
+        footerSection.style.display = 'flex';
+        footerSection.style.justifyContent = 'space-between';
+        footerSection.style.alignItems = 'center';
+        footerSection.style.padding = '20px';
+    
+        const price = document.createElement('p');
+        price.textContent = '';
+        price.style.fontSize = '20px';
+        price.style.fontWeight = 'bold';
+        footerSection.appendChild(price);
+    
+        const bookButton = document.createElement('button');
+        bookButton.textContent = 'BOOK NOW';
+        bookButton.className = 'btn btn-primary';
+        bookButton.style.padding = '10px 20px';
+        footerSection.appendChild(bookButton);
+    
+        detailView.appendChild(footerSection);
+    
+        // Append the detail view to mainContent
+        mainContent.appendChild(detailView);
+    });
+    
+    
   
       cbody.appendChild(a);
       storiesContainer.appendChild(storyDiv);    
@@ -291,39 +410,14 @@ function UI() {
 
 
 
-    // Recent posts section
-    const posts = document.createElement('div');
+     
      
 
-    const postsTitle = document.createElement('h3');
-    postsTitle.textContent = 'Recent Places';
-    posts.appendChild(postsTitle);
-    const postsContainer = document.createElement('div');
-    postsContainer.style.display = 'flex';
-    postsContainer.style.flexDirection = 'column';
-    postsContainer.style.gap = '10px';
-    ['Fun Gallery', 'Weekend', 'Lifestyle'].forEach(postName => {
-        let postDiv = document.createElement('div');
-        postDiv.textContent = postName;
-        postDiv.style.width = '100%';
-        postDiv.style.height = '200px';
-        postDiv.style.backgroundColor = '#F1F1F1';
-        postDiv.style.borderRadius = '10px';
-        postDiv.style.display = 'flex';
-        postDiv.style.alignItems = 'center';
-        postDiv.style.justifyContent = 'center';
-        postDiv.style.color = '#555';
-        postDiv.style.fontSize = '14px';
-        postsContainer.appendChild(postDiv);
-    });
-    posts.appendChild(postsContainer);
-
-    // display
+   
     mainContainer.appendChild(sidebar);
     mainContainer.appendChild(mainContent);
     mainContent.appendChild(header);
     mainContent.appendChild(stories);
-    mainContent.appendChild(posts);
 }
 
  
