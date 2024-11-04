@@ -85,7 +85,7 @@ let locationList = [
   }
 ];
 
-  
+
   
  
 function UI() {
@@ -112,7 +112,7 @@ function UI() {
  
     // Sidebar  left side
     const sidebar = document.createElement('div');
-    sidebar.style.backgroundColor = '#F7CAC2';
+    sidebar.style.backgroundColor = '#F6F6F6';
     sidebar.style.width = '15%';
     sidebar.style.display = 'flex';
     sidebar.style.flexDirection = 'column';
@@ -137,11 +137,12 @@ function UI() {
         iconContainer.style.flexDirection = 'column';
         iconContainer.style.alignItems = 'center';
         iconContainer.style.marginBottom = '20px';
-        
+         
         // Icon properties
         const iconDiv = document.createElement('div');
+
         iconDiv.textContent = item.icon;
-        iconDiv.style.backgroundColor = '#FF7052';
+        iconDiv.style.backgroundColor = '#EEEEEE';
         iconDiv.style.width = '50px';
         iconDiv.style.height = '50px';
         iconDiv.style.borderRadius = '50%';
@@ -155,19 +156,20 @@ function UI() {
     
     
         iconDiv.addEventListener('mouseover', () => {
-            iconDiv.style.backgroundColor = '#FFA07A';
-            iconDiv.style.transform = 'scale(1.1)';
+            iconDiv.style.backgroundColor = '98DED9';
+            iconDiv.style.transform = 'scale(1.5)';
         });
         iconDiv.addEventListener('mouseout', () => {
-            iconDiv.style.backgroundColor = '#FF7052';
+            iconDiv.style.backgroundColor = '#EEEEEE';
             iconDiv.style.transform = 'scale(1)';
         });
     
         
         if (item.label === 'Home') {
             iconDiv.addEventListener('click', () => {
-                window.location.reload();
-  
+              // document.getElementById("main")
+              window.location.reload();
+   
             });
         }
     
@@ -185,12 +187,15 @@ function UI() {
     
 
     //    Main 
+    
+    // const mainContainer = document.getElementById('main');
     const mainContent = document.createElement('div');
     mainContent.style.flex = '1';
     mainContent.style.padding = '20px';
     mainContent.style.display = 'flex';
     mainContent.style.flexDirection = 'column';
     mainContent.style.overflowY = 'auto';
+    mainContent.id ='main';
 
     // header
     const header = document.createElement('div');
@@ -211,7 +216,7 @@ function UI() {
     header.appendChild(searchInput);
 
 
-    
+
 
     // Stories  
     const stories = document.createElement('div');
@@ -405,7 +410,7 @@ function UI() {
   }
   
   stories.appendChild(storiesContainer);
-  
+
 
 
 
