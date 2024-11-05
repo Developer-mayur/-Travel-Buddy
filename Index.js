@@ -173,6 +173,13 @@ function UI() {
    
             });
         }
+
+        if (item.label ==='News'){
+          iconDiv.addEventListener('click',()=>{
+            News();
+          })
+
+        }
     
         // Icon label
         const labelDiv = document.createElement('div');
@@ -421,6 +428,330 @@ function UI() {
     }
 
 
+
+
+    function News(){
+ mainContent.innerHTML = "";
+   let data = [
+    {
+      "author": "Harsh Kapoor",
+      "title": "Andy Roddick Adds Forgotten Tennis Legend’s Name to Unfortunate Narrative Carried by Alexander Zverev",
+      "description": "When talking about tennis, a grand slam is the ultimate prize one can think of. Any player, who dreams of becoming a professional wants to win a grand slam someday. However, not everyone has been able to make their dreams turn into reality. One of those stars is Alexander Zverev. Highly regarded as one of [&#8230;]The post Andy Roddick Adds Forgotten Tennis Legend’s Name to Unfortunate Narrative Carried by Alexander Zverev appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/atp-tennis-news-andy-roddick-adds-forgotten-tennis-legends-name-to-unfortunate-narrative-carried-by-alexander-zverev/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/2024-09-21T182458Z_129600529_UP1EK9L1F5J2D_RTRMADP_3_TENNIS-LAVERCUP-449x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T06:42:30+00:00"
+    },
+    {
+      "author": "Upasana Banerjee",
+      "title": "Jessica Pegula Sparks True BFF Goals With Madison Keys as She Unevils Her Off-Season Plans by Teasing Into the Latter’s Nuptials",
+      "description": "Who says rivals can&#8217;t be friends? Look at America&#8217;s shining stars in tennis, Jessica Pegula and Madison Keys, whose friendship has transcended competition and offered the fraternity a beautiful display of love and care. Despite rooting for each other&#8217;s success, Pegula and Keys share a tough rivalry on the court. Following Pegula&#8217;s revelation of her [&#8230;]The post Jessica Pegula Sparks True BFF Goals With Madison Keys as She Unevils Her Off-Season Plans by Teasing Into the Latter’s Nuptials appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-jessica-pegula-sparks-true-bff-goals-with-madison-keys-as-she-unevils-her-off-season-plans-by-teasing-into-the-latters-nuptials/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/Madison-Keys-Jessica-Pegula-560x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T06:24:08+00:00"
+    },
+    {
+      "author": "By Northern Star Sports Staff",
+      "title": "Ninova and Dimitriev share Huskie of the Week Award",
+      "description": "NIU women’s tennis senior Erika Dimitriev and junior Nataly Ninova earned Co-Huskie of the Week honors after winning the doubles match in flight 1 of the NIU Huskie Invitational, which wrapped up on Sunday. The duo won flight 1 after conquering double partners from the University of St. Thomas and Lewis University. On top of the doubles title, Dimitriev also earned the title for the singles match in the first flight. Dimitriev, Ninova and the rest of the NIU women’s tennis team return to action in January. Next week’s Huskie of the Week will be announced Nov. 11.The Northern Star...",
+      "url": "https://northernstar.info/120246/sports/ninova-and-dimitriev-share-huskie-of-the-week-award/",
+      "source": "northernstar",
+      "image": null,
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T04:53:23+00:00"
+    },
+    {
+      "author": "Jackson Miller, Sports Reporter",
+      "title": "Iowa women’s tennis struggles in singles matches at Spartan Invitational",
+      "description": "The Iowa women’s tennis team struggled in singles play but strengthened in doubles as it competed at the Spartan Invitational in East Lansing, Michigan, over the weekend. The Hawkeyes faced players from Michigan State, Northwestern, Butler, DePaul, and Eastern Michigan.Fourth-year Barbora Pokorna and third-year Nikita Vishwase took home a victory in doubles on day one, taking down Regina Mendez and Kseniia Saenko of Eastern Michigan by a score of 6-3.In singles, Iowa lost all three matchups on day one, though. Michigan State’s Ellie Blackford defeated Pokorna, 6-4 and 6-2. Amara Brahbhahtt...",
+      "url": "https://dailyiowan.com/2024/11/04/iowa-womens-tennis-struggles-in-singles-matches-at-spartan-invitational/",
+      "source": "dailyiowan",
+      "image": null,
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T04:22:06+00:00"
+    },
+    {
+      "author": "Joshua Mayne",
+      "title": "Who is the world No.1 in men's tennis? Updated ATP rankings and explainer",
+      "description": "The ATP rankings have been updated and we'll be keeping track of every player inside the top 10.",
+      "url": "https://www.sportingnews.com/us/tennis/news/world-no-1-tennis-men-atp-rankings-explainer-updated/w5kranveoicurzao0msj7fh1",
+      "source": "Sporting News",
+      "image": "https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2024-06/Untitled%20design%20-%202024-06-11T082417.109.png?h=99362da5&amp;itok=-ZrTM63a",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T03:40:18+00:00"
+    },
+    {
+      "author": "Upasana Banerjee",
+      "title": "Serena Williams’ Daughter Adira’s Adorable Tennis Job Sparks Priceless 6-Word Taskmaster Reaction from Proud Dad Alexis Ohanian",
+      "description": "What can be more precious than a mother-daughter bonding moment? Probably, nothing! Former WTA number one Serena Williams offered a glimpse of her recent moments with her daughter Adira which was enough to make people fall in love with motherhood. Now, it has been only a few months since fans started receiving glimpses of Williams&#8217; [&#8230;]The post Serena Williams’ Daughter Adira’s Adorable Tennis Job Sparks Priceless 6-Word Taskmaster Reaction from Proud Dad Alexis Ohanian appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-serena-williams-daughter-adiras-adorable-tennis-job-sparks-priceless-six-word-taskmaster-reaction-from-proud-dad-alexis-ohanian/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/WhatsApp-Image-2024-11-04-at-22.36.02-526x315.jpeg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T02:01:01+00:00"
+    },
+    {
+      "author": "Rupam Shukla",
+      "title": "‘Throwing Saudi Money at Tennis Won’t Fix Issues’ – Fans Vent Frustration Over $15M WTA Event With Coco Gauff, Iga Swiatek, and Other Stars Amid Latest Expose",
+      "description": "The WTA Finals have kicked off in Riyadh, and while the stakes are sky-high with tennis titans like Aryna Sabalenka, Iga Swiatek, and Coco Gauff battling for glory, there’s an unexpected twist—empty seats. Fans and experts alike are noticing the glaring lack of crowd energy in the arena, a stark contrast to the excitement expected [&#8230;]The post ‘Throwing Saudi Money at Tennis Won’t Fix Issues’ – Fans Vent Frustration Over $15M WTA Event With Coco Gauff, Iga Swiatek, and Other Stars Amid Latest Expose appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-throwing-saudi-money-at-tennis-wont-fix-issues-fans-vent-frustration-over-fifteen-m-wta-event-with-coco-gauff-iga-swiatek-and-other-stars-amid-latest-expose/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/WhatsApp-Image-2024-05-06-at-17.35.22-560x315.jpeg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T01:51:11+00:00"
+    },
+    {
+      "author": "Dan Albano",
+      "title": "Six Orange County girls tennis teams picked for the CIF-SS Open Division playoffs",
+      "description": "Portola, Santa Margarita and Corona del Mar are seeded in the top-four behind No. 1 Palos Verdes.",
+      "url": "https://www.ocregister.com/2024/11/04/six-orange-county-girls-tennis-teams-picked-for-the-cif-ss-open-division-playoffs/",
+      "source": "ocregister",
+      "image": "https://www.ocregister.com/wp-content/uploads/2024/09/ocvarsity-g-tennis4.jpg?w=1400px&strip=all",
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T01:03:04+00:00"
+    },
+    {
+      "author": "Rupam Shukla",
+      "title": "‘Comeback Has Started in Prequalifying’- Serena Williams’ Ex-Coaches React Warmly as Little Adira Ohanian Steps Up as Mom’s Sweetest Helper",
+      "description": "Serena Williams might have bid farewell to the courts, but her presence is as captivating as ever for tennis fans worldwide. The American icon continues to capture hearts, whether she’s gracing courtside events or dazzling fans with her entrepreneurial ventures. She has become a true off-court superstar, and the headlines just keep rolling in. But [&#8230;]The post ‘Comeback Has Started in Prequalifying’- Serena Williams’ Ex-Coaches React Warmly as Little Adira Ohanian Steps Up as Mom’s Sweetest Helper appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-comeback-has-started-in-prequalifying-serena-williams-ex-coaches-react-warmly-as-little-adira-ohanian-steps-up-as-moms-sweetest-helper/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/SaveClip.App_464258582_18467038414015148_2454709951686394844_n-e1730767638735-450x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T00:47:29+00:00"
+    },
+    {
+      "author": "Marin Independent Journal",
+      "title": "Sports in Marin: Tuesday, Wednesday",
+      "description": "Tuesday Girls tennis MCAL singles/doubles, 11 a.m., Novato HS",
+      "url": "https://www.marinij.com/2024/11/04/sports-in-marin-tuesday-wednesday-165/",
+      "source": "marinij",
+      "image": null,
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-05T00:46:38+00:00"
+    },
+    {
+      "author": "Shay Castle",
+      "title": "CU, City of Boulder team up to build tennis courts",
+      "description": "Local news at a glanceThe post CU, City of Boulder team up to build tennis courts appeared first on Boulder Weekly.",
+      "url": "https://boulderweekly.com/news/tennis-courts-cu-boulder/?utm_source=rss&utm_medium=rss&utm_campaign=tennis-courts-cu-boulder",
+      "source": "boulderweekly",
+      "image": null,
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T22:48:16+00:00"
+    },
+    {
+      "author": "The Times Record",
+      "title": "Brunswick business owner awarded 2024 Manager of the Year for Small Racquet Facilities",
+      "description": "Rob Manter, owner and manager of Maine Pines Racquet & Fitness in Brunswick, was recently awarded the national 2024 Manager of the Year for Small Racquet Facilities by the United States Professional Tennis Association, Inc. (USPTA). Manter, who has owned the club since 1998, was one of three pros to start USPTA League Programs in [&#8230;]",
+      "url": "https://www.pressherald.com/2024/11/04/brunswick-business-owner-awarded-2024-manager-of-the-year-for-small-racquet-facilities/",
+      "source": "timesrecord",
+      "image": "https://w2pcms.com/wp-content/uploads/sites/10/2020/11/IMG_5373-rotated-e1605633622314.jpeg",
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T22:04:25+00:00"
+    },
+    {
+      "author": "Eric-Paul Johnson",
+      "title": "CIF-SS girls tennis playoffs: Several top Inland teams hitting the road for openers",
+      "description": "The area's six top-ranked teams avoided the Open Division, but only Los Osos has a home match for the Division 1 playoff openers.",
+      "url": "https://www.sbsun.com/2024/11/04/cif-ss-girls-tennis-playoffs-several-top-inland-teams-hitting-the-road-for-openers/",
+      "source": "sbsun",
+      "image": "https://www.sbsun.com/wp-content/uploads/2023/11/ocvarsity-g-tennis4.jpg?w=1400px&strip=all",
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T21:55:58+00:00"
+    },
+    {
+      "author": "Eric-Paul Johnson",
+      "title": "CIF-SS girls tennis playoffs: Several top Inland teams hitting the road for openers",
+      "description": "The area's six top-ranked teams avoided the Open Division, but only Los Osos has a home match for the Division 1 playoff openers.",
+      "url": "https://www.redlandsdailyfacts.com/2024/11/04/cif-ss-girls-tennis-playoffs-several-top-inland-teams-hitting-the-road-for-openers/",
+      "source": "redlandsdailyfacts",
+      "image": "https://www.redlandsdailyfacts.com/wp-content/uploads/2023/11/ocvarsity-g-tennis4.jpg?w=1400px&strip=all",
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T21:55:58+00:00"
+    },
+    {
+      "author": "Eric-Paul Johnson",
+      "title": "CIF-SS girls tennis playoffs: Several top Inland teams hitting the road for openers",
+      "description": "The area's six top-ranked teams avoided the Open Division, but only Los Osos has a home match for the Division 1 playoff openers.",
+      "url": "https://www.dailybulletin.com/2024/11/04/cif-ss-girls-tennis-playoffs-several-top-inland-teams-hitting-the-road-for-openers/",
+      "source": "dailybulletin",
+      "image": "https://www.dailybulletin.com/wp-content/uploads/2023/11/ocvarsity-g-tennis4.jpg?w=1400px&strip=all",
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T21:55:58+00:00"
+    },
+    {
+      "author": "Vatsal Shah",
+      "title": "Serena Williams’ Youngest Daughter Adira Steps Up as Mini-Helper for Legendary Mom in Heart-Melting Tennis Day-Out Photos",
+      "description": "Kids often inherit the characteristics from their parents. The case of Serena Williams is no exception as tennis runs deep into her family. The American legend can often be seen sharing adorable glimpses with her husband and daughters. Recently, she shared a cute video of her younger daughter, Adira, offering her mother a helping hand [&#8230;]The post Serena Williams’ Youngest Daughter Adira Steps Up as Mini-Helper for Legendary Mom in Heart-Melting Tennis Day-Out Photos appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-serena-williams-youngest-daughter-adira-steps-up-as-mini-helper-for-legendary-mom-in-heart-melting-tennis-day-out-photos/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/WhatsApp-Image-2024-11-04-at-22.36.02-526x315.jpeg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T21:47:39+00:00"
+    },
+    {
+      "author": "Oska",
+      "title": "Serena Williams Shares Heartwarming Moment on Tennis Court with Youngest Daughter Adira",
+      "description": "Tennis icon Serena Williams is already nurturing a love for tennis in her youngest daughter, Adira, who she welcomed with husband Alexis Ohanian in August 2023. In an adorable video shared on Monday, Williams is seen following little Adira around the tennis court as she happily picks up tennis balls, showcasing a tender mother-daughter moment. &#8230;The post Serena Williams Shares Heartwarming Moment on Tennis Court with Youngest Daughter Adira appeared first on SportsRation.",
+      "url": "https://sportsration.com/serena-williams-shares-heartwarming-moment-on-tennis-court-with-youngest-daughter-adira/",
+      "source": "Sportsration: Nigeria Soccer | World Sports",
+      "image": null,
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T20:49:55+00:00"
+    },
+    {
+      "author": "Aarav Singh Gill",
+      "title": "‘Them dimples gone hit every time’- Sloane Stephens’ Alluring ‘Beauty’ Outing Leaves Taylor Townsend and Tennis Influencer Jaw-Dropped",
+      "description": "Sloane Stephens might not be performing at an all-time high on the WTA, but she is dripping in swagger outside of the courts. The American sensation has been plagued by a drop in form, a noteworthy concern for someone who lifted the US Open title in 2017. While her on-court adventures fail to navigate past [&#8230;]The post ‘Them dimples gone hit every time’- Sloane Stephens’ Alluring ‘Beauty’ Outing Leaves Taylor Townsend and Tennis Influencer Jaw-Dropped appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-them-dimples-gone-hit-every-time-sloane-stephens-alluring-beauty-outing-leaves-taylor-townsend-and-tennis-influencer-jaw-dropped/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/20200403230738/sloane-stephens-i-still-want-my-mother-to-pay-my-cellphone-bill-473x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T19:30:38+00:00"
+    },
+    {
+      "author": "Firdows Matheen",
+      "title": "‘Create Your Own Schedule’- Ex-WTA Pro Hits Back at Carlos Alcaraz, Jannik Sinner, and Others’ Scathing Criticism of Tennis’ Problem",
+      "description": "The tennis tour is notoriously demanding. Players travel across multiple countries, endure intense training, and participate in long matches. Fatigue is common, and many have chosen to withdraw from competitions. Even top stars like Iga Swiatek and Carlos Alcaraz have spoken about the challenges of managing the grueling schedule. However, a former pro has a [&#8230;]The post ‘Create Your Own Schedule’- Ex-WTA Pro Hits Back at Carlos Alcaraz, Jannik Sinner, and Others’ Scathing Criticism of Tennis’ Problem appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-create-your-own-schedule-carlos-alcaraz-and-iga-swiateks-criticism-of-the-demanding-tennis-calendar-thrashed-by-spanish-ex-pro/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/Iga-Swiatek-Carlos-Alcaraz-560x315.jpeg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T19:09:31+00:00"
+    },
+    {
+      "author": null,
+      "title": "Champions crowned in tennis contest",
+      "description": "The premier senior event on the Bahamas Lawn Tennis Association (BLTA) calendar came to a successful close on Sunday at the National Tennis Centre in Nassau, Bahamas. The following National Champions were crowned:",
+      "url": "https://tribune242.com/news/2024/nov/04/champions-crowned-in-tennis-contest/",
+      "source": "tribune242",
+      "image": null,
+      "category": "general",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T19:01:00+00:00"
+    },
+    {
+      "author": "Vatsal Shah",
+      "title": "Jannik Sinner’s High Profile Turin Entry Becomes Unforgettable as Fans Greet the World No.1 With an Exceptional Welcome",
+      "description": "It all boils down to this point. After a hectic tennis season, and the year-ending showdown, the ATP Finals are just days away. The top eight players of the season will descend to Turin to stake a claim at winning the year-ending championships. However, there emerges a clear favorite to win the tournament, and it [&#8230;]The post Jannik Sinner’s High Profile Turin Entry Becomes Unforgettable as Fans Greet the World No.1 With an Exceptional Welcome appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/atp-tennis-news-jannik-sinners-high-profile-turin-entry-becomes-unforgettable-as-fans-greet-the-world-no-with-an-exceptional-welcome/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/2023-11-18T161816Z_500522553_UP1EJBI19AD9Q_RTRMADP_3_TENNIS-ATPFINALS-454x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T17:18:52+00:00"
+    },
+    {
+      "author": "Melina B. (REMOTE)",
+      "title": "Süßer Post: Sophia Thomalla scherzt über Alexanders Pokal",
+      "description": "Alexander Zverev (27) hat in Paris erneut bewiesen, dass er zur Weltspitze im Tennis gehört. Im Finale des Masters-1000-Turniers besiegte der 27-Jährige den Franzosen Ugo Humbert und sicherte sich damit seinen siebten Titel auf dieser Ebene. Seine Freundin Sophia Thomalla (35), die bald die neue Awardshow \"Die Reality Awards\" moderieren wird, feierte seinen Sieg auf ihre eigene humorvolle Art: Auf Instagram teilte sie ein Foto von Alexander mit dem ungewöhnlichen Pokal und kommentierte dazu: \"Endlich mal ein Baum zu Hause, der nicht eingeht.\"",
+      "url": "https://www.promiflash.de/news/2024/11/04/suesser-post-sophia-thomalla-scherzt-ueber-alexanders-pokal.html",
+      "source": "promiflash",
+      "image": "https://content4.promiflash.de/article-images/video_1080/alexander-zverev-und-sophia-thomalla-posieren-6.jpg",
+      "category": "general",
+      "language": "de",
+      "country": "de",
+      "published_at": "2024-11-04T16:30:00+00:00"
+    },
+    {
+      "author": "Aarav Singh Gill",
+      "title": "‘Hope To Do Half of What She’s Done’- Coco Gauff Won’t Let the World Forget Venus Williams’ Gigantic Contribution to Tennis",
+      "description": "Not a lesser-known fact but Venus Williams has redefined boundaries and expectations since she first stormed the sport three decades ago. Back then, women lacked a substantial bearing in tennis. However, Williams scripted jaw-dropping records that inspired millions of her followers to take motivation from her journey. One of those is the current World No. [&#8230;]The post ‘Hope To Do Half of What She’s Done’- Coco Gauff Won’t Let the World Forget Venus Williams’ Gigantic Contribution to Tennis appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-hope-to-do-half-of-what-shes-done-coco-gauff-wont-let-the-world-forget-venus-williams-gigantic-contribution-to-tennis/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/Venus-Williams-Coco-Gauff-394x315.jpeg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T14:03:47+00:00"
+    },
+    {
+      "author": "Sayantan Roy",
+      "title": "Tennis Rumor: Iga Swiatek’s Cryptic Revelation After Nail-Biting WTA Finals Win Might Just Be About Her Coaching Drama",
+      "description": "Iga is back! After having a &#8220;rusty&#8221; start to her first match at the 2024 WTA Finals, Iga Swiatek made a strong comeback to seal the deal against Barbora Krejcikova (CZE) on Sunday. She defeated her by 4-6,7-5,6-2 and next up for her is American superstar Coco Gauff. Swiatek has been out of action for [&#8230;]The post Tennis Rumor: Iga Swiatek’s Cryptic Revelation After Nail-Biting WTA Finals Win Might Just Be About Her Coaching Drama appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/wta-tennis-news-tennis-rumor-iga-swiateks-cryptic-revelation-after-nail-biting-wta-finals-win-might-just-be-about-her-coaching-drama/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/2024-07-31T161406Z_2079677823_UP1EK7V193GKL_RTRMADP_3_OLYMPICS-2024-TENNIS-473x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T11:10:46+00:00"
+    },
+    {
+      "author": "Firdows Matheen",
+      "title": "‘Means the World’ – Emotional Alexander Zverev Shares Heartfelt Message for His Father-Led Team Post Glorious Paris Masters Win",
+      "description": "Alexander Zverev is indeed taking the tennis world by storm! This season, he has shown incredible resilience, bouncing back after a tough quarterfinal exit at the Vienna Open against Lorenzo Musetti. Now, he’s back on his feet, having clinched the title at the 2024 Paris Masters, defeating Ugo Humbert with a commanding score of 6-2, [&#8230;]The post &#8216;Means the World&#8217; – Emotional Alexander Zverev Shares Heartfelt Message for His Father-Led Team Post Glorious Paris Masters Win appeared first on EssentiallySports.",
+      "url": "https://www.essentiallysports.com/atp-tennis-news-means-the-world-emotional-alexander-zverev-shares-heartfelt-message-for-his-father-led-team-post-glorious-paris-masters-win/",
+      "source": "Essentially Sports",
+      "image": "https://image-cdn.essentiallysports.com/wp-content/uploads/2024-07-02T154548Z_1719624807_UP1EK7217S9OT_RTRMADP_3_TENNIS-WIMBLEDON-440x315.jpg",
+      "category": "sports",
+      "language": "en",
+      "country": "us",
+      "published_at": "2024-11-04T07:28:02+00:00"
+    }
+  ]
+
+       
+        
+
+      let storyd =document.createElement("div");
+      storyd.setAttribute("style","height:150px;background-color:alice; border:1px solid");
+     for (const element of object) {
+       let story =document.createElement("div");
+       story.setAttribute("style","height:100px;border:1px solid");
+       
+       storyd.appendChild(story);
+     }
+     
+     mainContent.appendChild(storyd);
+
+
+
+    }
 
 
      
