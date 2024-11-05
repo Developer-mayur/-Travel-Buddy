@@ -168,7 +168,8 @@ function UI() {
         if (item.label === 'Home') {
             iconDiv.addEventListener('click', () => {
               // document.getElementById("main")
-              window.location.reload();
+              // window.location.reload();
+              def();
    
             });
         }
@@ -185,11 +186,11 @@ function UI() {
         sidebar.appendChild(iconContainer);
     }
     
+    
 
     //    Main 
     
-    // const mainContainer = document.getElementById('main');
-    const mainContent = document.createElement('div');
+    let mainContent = document.createElement('div');
     mainContent.style.flex = '1';
     mainContent.style.padding = '20px';
     mainContent.style.display = 'flex';
@@ -197,7 +198,12 @@ function UI() {
     mainContent.style.overflowY = 'auto';
     mainContent.id ='main';
 
+   def();
+
+     
+    function def(){
     // header
+    mainContent.innerHTML ="";
     const header = document.createElement('div');
     header.style.display = 'flex';
     header.style.justifyContent = 'space-between';
@@ -410,7 +416,9 @@ function UI() {
   }
   
   stories.appendChild(storiesContainer);
-
+  mainContent.appendChild(header);
+  mainContent.appendChild(stories);
+    }
 
 
 
@@ -421,8 +429,8 @@ function UI() {
    
     mainContainer.appendChild(sidebar);
     mainContainer.appendChild(mainContent);
-    mainContent.appendChild(header);
-    mainContent.appendChild(stories);
+    
+  
 }
 
  
