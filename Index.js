@@ -747,33 +747,44 @@ function UI() {
   ]
 
        
-        
+  const stories = document.createElement('div');
+  const storiesTitle = document.createElement('h3');
+  storiesTitle.textContent = "Best News";
+  stories.appendChild(storiesTitle);
+  const storiesContainer = document.createElement('div');
+  storiesContainer.style.display = 'flex';
+  storiesContainer.style.flexWrap = 'wrap';
+  storiesContainer.style.gap = '10px';
+  storiesContainer.setAttribute("style","border:1px solid");
+  stories.appendChild(storiesContainer);
+ 
+  // Fetch 
+  for (const element of data) {
+    let storyDiv = document.createElement('div');  
+    storyDiv.setAttribute("class","card ");
+    storyDiv.setAttribute("style","width: 18rem; ");
 
-      let storyd =document.createElement("div");
-      storyd.setAttribute("style","height:150px;background-color:alice; border:1px solid");
-     for (const element of object) {
-       let story =document.createElement("div");
-       story.setAttribute("style","height:100px;border:1px solid");
-       
-       storyd.appendChild(story);
-     }
-     
-     mainContent.appendChild(storyd);
+    let img = document.createElement("img");
+    img.src = element.image;
+    img.setAttribute("style","height:140px ");
+    img.setAttribute("class","card-img-top");
+    storyDiv.appendChild(img); 
+    
+    let p =document.createElement("p");
+    p.setAttribute("style","height:100px")
+  storyDiv.appendChild(p);
+          
+}
+mainContent.appendChild(stories); 
+stories.appendChild(storiesContainer);
+storiesContainer.appendChild(storyDiv);
 
-
-
-    }
-
-
-     
-     
-
-   
+ }
     mainContainer.appendChild(sidebar);
     mainContainer.appendChild(mainContent);
     
   
-}
+
 
  
-
+}
