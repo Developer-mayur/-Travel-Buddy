@@ -181,6 +181,17 @@ function UI() {
 
         }
     
+        if (item.label ==='Profile'){
+          iconDiv.addEventListener('click',()=>{
+            News();
+          })
+
+        } if (item.label ==='Settings'){
+          iconDiv.addEventListener('click',()=>{
+            News();
+          })
+
+        }
         // Icon label
         const labelDiv = document.createElement('div');
         labelDiv.textContent = item.label;
