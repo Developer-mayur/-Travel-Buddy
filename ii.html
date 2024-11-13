@@ -3,162 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up / Sign In Form</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>News Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #search-bar {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+        }
+        #search-button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .article {
+            margin: 20px 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+        .article img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .article h3 {
+            margin: 0;
+        }
+        .article p {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        function createAuthForm() {
-            // Create main container
-            const container = document.createElement('div');
-            container.style.width = '768px';
-            container.style.maxWidth = '100%';
-            container.style.minHeight = '480px';
-            container.style.background = '#fff';
-            container.style.borderRadius = '10px';
-            container.style.boxShadow = '0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.19)';
-            container.style.position = 'relative';
-            container.style.overflow = 'hidden';
-            container.style.display = 'flex';
-            container.style.alignItems = 'center';
-            container.style.margin = '50px auto';
-            document.body.appendChild(container);
 
-            // Create form containers
-            const signInContainer = createFormContainer('Sign In', false);
-            const signUpContainer = createFormContainer('Create Account', true);
-            
-            // Create overlay container
-            const overlayContainer = document.createElement('div');
-            overlayContainer.style.position = 'absolute';
-            overlayContainer.style.top = '0';
-            overlayContainer.style.left = '50%';
-            overlayContainer.style.width = '50%';
-            overlayContainer.style.height = '100%';
-            overlayContainer.style.overflow = 'hidden';
-            overlayContainer.style.transition = 'transform 0.6s ease-in-out';
-            container.appendChild(overlayContainer);
+<h1>Search News</h1>
+<!-- Search Input and Button -->
+<input type="text" id="search-bar" placeholder="Search for news...">
+<button id="search-button">Search</button>
 
-            // Create overlay
-            const overlay = document.createElement('div');
-            overlay.style.background = 'linear-gradient(to right, #ff4b2b, #ff416c)';
-            overlay.style.position = 'relative';
-            overlay.style.height = '100%';
-            overlay.style.width = '200%';
-            overlay.style.transition = 'transform 0.6s ease-in-out';
-            overlayContainer.appendChild(overlay);
+<!-- Filter Section (Category and Country) -->
+<select id="category-select">
+    <option value="general">General</option>
+    <option value="business">Business</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="health">Health</option>
+    <option value="science">Science</option>
+    <option value="sports">Sports</option>
+    <option value="technology">Technology</option>
+</select>
 
-            // Create overlay panels
-            const overlayLeft = createOverlayPanel('Welcome Back!', 'To keep connected with us please login with your personal info.', 'Sign In');
-            const overlayRight = createOverlayPanel('Hello, Friend!', 'Enter your personal details and start your journey with us.', 'Sign Up');
+<select id="country-select">
+    <option value="in">India</option>
+    <option value="us">USA</option>
+    <option value="au">Australia</option>
+    <option value="gb">UK</option>
+    <option value="fr">France</option>
+    <option value="ru">Russia</option>
+</select>
 
-            overlay.appendChild(overlayLeft);
-            overlay.appendChild(overlayRight);
+<!-- Results Container -->
+<div id="results"></div>
 
-            // Button click event listeners for switching
-            overlayRight.querySelector('button').addEventListener('click', () => {
-                container.classList.add('right-panel-active');
-            });
+<script>
+  
+// Elements
+const searchButton = document.getElementById('search-button');
+const searchBar = document.getElementById('search-bar');
+const resultsContainer = document.getElementById('results');
+const categorySelect = document.getElementById('category-select');
+const countrySelect = document.getElementById('country-select');
 
-            overlayLeft.querySelector('button').addEventListener('click', () => {
-                container.classList.remove('right-panel-active');
-            });
+// Fetch the search results based on query, category, and country
+function fetchNews(query, category, country) {
+    const url = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'ok') {
+                const filteredArticles = data.articles.filter(article => article.title.toLowerCase().includes(query.toLowerCase()) || article.description.toLowerCase().includes(query.toLowerCase()));
+                displayResults(filteredArticles);
+            } else {
+                resultsContainer.innerHTML = 'No results found.';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching the news:', error);
+            resultsContainer.innerHTML = 'Error fetching news.';
+        });
+}
 
-            // Append containers to the main container
-            container.appendChild(signUpContainer);
-            container.appendChild(signInContainer);
-        }
+// Display the news articles
+function displayResults(articles) {
+    resultsContainer.innerHTML = ''; // Clear previous results
+    if (articles.length === 0) {
+        resultsContainer.innerHTML = 'No articles found.';
+        return;
+    }
 
-        function createFormContainer(title, isSignUp) {
-            const formContainer = document.createElement('div');
-            formContainer.style.position = 'absolute';
-            formContainer.style.height = '100%';
-            formContainer.style.width = '50%';
-            formContainer.style.display = 'flex';
-            formContainer.style.flexDirection = 'column';
-            formContainer.style.justifyContent = 'center';
-            formContainer.style.alignItems = 'center';
-            formContainer.style.textAlign = 'center';
-            formContainer.style.transition = 'opacity 0.6s ease-in-out';
-            formContainer.style.opacity = isSignUp ? '1' : '0'; // Show sign-up by default
+    articles.forEach(article => {
+        const articleElement = document.createElement('div');
+        articleElement.classList.add('article');
+        articleElement.innerHTML = `
+            <div style="display: flex; align-items: center;">
+                <img src="${article.urlToImage}" alt="${article.title}" />
+                <div>
+                    <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+                    <p>${article.description}</p>
+                </div>
+            </div>
+        `;
+        resultsContainer.appendChild(articleElement);
+    });
+}
 
-            const h1 = document.createElement('h1');
-            h1.textContent = title;
-            formContainer.appendChild(h1);
+// Event Listener for Search Button
+searchButton.addEventListener('click', function() {
+    const query = searchBar.value.trim();
+    const category = categorySelect.value;
+    const country = countrySelect.value;
 
-            // Create input fields
-            const inputs = isSignUp 
-                ? [{ type: 'text', placeholder: 'Name' }, { type: 'email', placeholder: 'Email' }, { type: 'password', placeholder: 'Password' }]
-                : [{ type: 'email', placeholder: 'Email' }, { type: 'password', placeholder: 'Password' }];
+    if (query) {
+        fetchNews(query, category, country);
+    } else {
+        alert("Please enter a search term!");
+    }
+});
 
-            inputs.forEach(input => {
-                const inputField = document.createElement('input');
-                inputField.type = input.type;
-                inputField.placeholder = input.placeholder;
-                inputField.style.width = '100%';
-                inputField.style.padding = '12px 15px';
-                inputField.style.margin = '8px 0';
-                inputField.style.background = '#eee';
-                inputField.style.border = 'none';
-                inputField.style.borderRadius = '5px';
-                formContainer.appendChild(inputField);
-            });
+// Optional: You can add more features like live search or resetting results here
+</script>
 
-            // Create button
-            const button = document.createElement('button');
-            button.textContent = isSignUp ? 'Sign Up' : 'Sign In';
-            button.style.width = '100%';
-            button.style.padding = '12px 15px';
-            button.style.margin = '10px 0';
-            button.style.borderRadius = '20px';
-            button.style.border = 'none';
-            button.style.background = '#ff445c';
-            button.style.color = '#fff';
-            button.style.fontSize = '14px';
-            button.style.fontWeight = 'bold';
-            button.style.cursor = 'pointer';
-            formContainer.appendChild(button);
-
-            return formContainer;
-        }
-
-        function createOverlayPanel(title, text, buttonText) {
-            const panel = document.createElement('div');
-            panel.style.position = 'relative';
-            panel.style.width = '50%';
-            panel.style.height = '100%';
-            panel.style.display = 'flex';
-            panel.style.flexDirection = 'column';
-            panel.style.justifyContent = 'center';
-            panel.style.alignItems = 'center';
-            panel.style.color = 'white';
-            panel.style.textAlign = 'center';
-
-            const h1 = document.createElement('h1');
-            h1.textContent = title;
-            panel.appendChild(h1);
-
-            const p = document.createElement('p');
-            p.textContent = text;
-            panel.appendChild(p);
-
-            const button = document.createElement('button');
-            button.textContent = buttonText;
-            button.style.borderRadius = '20px';
-            button.style.border = 'none';
-            button.style.background = 'transparent';
-            button.style.color = '#fff';
-            button.style.fontSize = '12px';
-            button.style.fontWeight = 'bold';
-            button.style.padding = '12px 45px';
-            button.style.cursor = 'pointer';
-            panel.appendChild(button);
-
-            return panel;
-        }
-
-        // Initialize the form
-        createAuthForm();
-    </script>
 </body>
 </html>
