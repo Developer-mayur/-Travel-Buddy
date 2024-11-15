@@ -1,86 +1,86 @@
 let locationList = [
   {
     "id": 1,
-    "title": "Essence Mascara Lash Princess",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Rajwada Palace, Indore",
+    "paragraph": "This iconic seven-story palace in Indore, Madhya Pradesh, was constructed by the Holkar dynasty. Featuring Maratha, Mughal, and French architectural influences, Rajwada is known for its grand facade, historical artifacts, and a serene garden with fountains. Visitors can also experience a light and sound show narrating its history.",
     "images": "https://www.holidify.com/images/cmsuploads/compressed/3551_20190228103219.jpg",
     "rating": "⭐️⭐️⭐️⭐️⭐️"
   },
   {
     "id": 2,
-    "title": "Eyeshadow Palette with Mirror",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Patalpani Water Falls",
+    "paragraph": "Best place to visit in rainy season (July to September)Nice Views | Nice Place for Photography |It is almost 35kms from Indore city One canvisit there by bus/train/Bike .",
     "images": "https://i.pinimg.com/564x/36/c1/68/36c168dc2ff64fd2da8d1779fb8162a5.jpg",
     "rating": "⭐️⭐️⭐️⭐️"
   },
   {
     "id": 3,
-    "title": "Powder Canister",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title":  "56 dukan Indore",
+    "paragraph": "This place has over 56 shops selling food things , you can large variety of Good food at very reasonable rates , went there 3 times in my stay for 3 nights enjoyed the place thoroughly very neat and clean place.",
     "images": "https://i.pinimg.com/564x/bf/19/3b/bf193b0d26708c465e9e7a90cf458e52.jpg",
     "rating": "⭐️⭐️⭐️"
   },
   {
     "id": 4,
-    "title": "Red Lipstick",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Khajrana Ganesh Mandir",
+    "paragraph": "Khajrana Ganesha Temple was constructed by Rani Ahilyabai Holkar. This temple is one of the famous Hindu temples in India. Mostly wednesday and sunday huge people will come to this temple for offering prayers. As per a local belief, all the wishes of the devotees are fulfilled, once they worship in this temple. The main festival of this temple is vinayak chathurthi and was held in grand manner in the month of August and september.",
     "images": "https://i.pinimg.com/236x/6c/17/8c/6c178c3111d02f6a4fce22ba9f1b45b6.jpg",
     "rating": "⭐️⭐️⭐️⭐️⭐️"
   },
   {
     "id": 5,
-    "title": "Essence Mascara Lash Princess",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Gandhi Hall",
+    "paragraph": " Gandhi Hall is a prime example of British influence on Indian architecture in Indore. Originally known as King Edward Hall when it was built in 1904, the monument was renamed to its present title by Yeshwant Rao Holkar (1926-1948) following the assassination of Mahatma Gandhi in 1948.",
     "images": "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg",
     "rating": "⭐️⭐️⭐️⭐️"
   },
   {
     "id": 6,
-    "title": "Eyeshadow Palette with Mirror",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-    "images": "https://i.pinimg.com/236x/74/df/a1/74dfa1e0f9a9fcfec96b6e01e91c09cd.jpg",
+    "title": "Meghdoot Garden",
+    "paragraph": "Meghdoot Garden, located in the vibrant city of Indore, Madhya Pradesh, is one of the city's most beloved green spaces. Spanning several acres, it is a popular destination for locals and tourists alike. This article provides a comprehensive overview of Meghdoot Garden, covering its history, features, attractions, and visitor information.",
+    "images": "https://lh3.googleusercontent.com/p/AF1QipOBspe4EWILgIfUrqPHqFC2paNujgPF7MOF4r4g=s294-w294-h220-k-no",
     "rating": "⭐️⭐️⭐️"
   },
   {
     "id": 7,
-    "title": "Powder Canister",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-    "images": "https://i.pinimg.com/236x/a8/48/c4/a848c4e41f714bbabd02e0dee8e4c409.jpg",
+    "title": "Phoenix Citadel Mall",
+    "paragraph": "Phoenix Citadel is one of the largest retail and leisure centres in Madhya Pradesh. The gorgeous retail destination offers an impressive line-up of high-end stores for every style, premier dining experiences and endless entertainment. With over 1.0 million sq. ft. of retail space, this is one of India’s most elegant malls. At Phoenix Citadel, we have something for everyone. From fashion to food, we have exactly what you desire. With over 300 stores and 75+ dining options and entertainment attractions, we cater to our customers’ requirements in every way, revolutionising Indore’s shopping experience.",
+    "images": " https://phoenixcitadel.s3.ap-south-1.amazonaws.com/images/about/New/Img_5.jpg",
     "rating": "⭐️⭐️⭐️⭐️⭐️"
   },
   {
     "id": 8,
-    "title": "Red Lipstick",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-    "images": "https://i.pinimg.com/564x/3f/d2/22/3fd22298f59ca62d156d839e9ac25c56.jpg",
+    "title": "Treasure Island ",
+    "paragraph": "  Central India's first Urban Consumption Centre is spread across 0.4 million sq. ft. Hosting over 100 premium brands, the Urban Consumption Centre is a popular shopping and entertainment destination among the neighbouring towns.",
+    "images": " https://www.nexusselecttrust.com/resources/assets/images/treasure-island/banner.jpg",
     "rating": "⭐️⭐️⭐️⭐️"
   },
   {
     "id": 9,
-    "title": "Essence Mascara Lash Princess",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Bhagwan Bahubali Digamber Jain Atishay Tirth kshetra, Gommatgiri ",
+    "paragraph": " This established by motivation of Aacharyashri Vidyasagarji. Panchkalyanaka took place in the year 1986 in presence of Aacharyashri Vidyanandiji, Aacharyashri Vimalsagarji and many eminent saints. The place is very beautiful with all modern amenities. Idols of Trikal Choubisi are of gems and one must see them. Annual Fair: Second Sunday of March. Special Information: Many Grand Temples are there in Indore which are must see.",
     "images": "https://i.pinimg.com/564x/b6/8b/bf/b68bbfafc5c1d3a98d39d83a13b1d1d6.jpg",
     "rating": "⭐️⭐️⭐️"
   },
   {
     "id": 10,
-    "title": "Eyeshadow Palette with Mirror",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
+    "title": "Bada Ganpati, Indore ",
+    "paragraph": " There are conflicting accounts of how the sacred abode came into existence. Established in the year 1875 by Shri Dadich, the construction of Bada Ganpati Temple was brought about by the family members Holkar Dynasty, the rulers of the region then. The Queen Ahilya Bai Holkar undertook the project under her wing more than 100 years ago. Ganpati is said to be the bringer of happiness and prosperity. The Lord is worshipped at the beginning of any new event, venture, or pooja in the entire nation. Devotees from all over the world come to Indore to visit this statue which has a high religious significance.",
     "images": "https://www.fabhotels.com/blog/wp-content/uploads/2019/04/Bada-Ganapati-Temple.jpg",
     "rating": "⭐️⭐️⭐️⭐️⭐️"
   },
   {
     "id": 11,
-    "title": "Powder Canister",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-    "images": "https://i.pinimg.com/236x/d2/73/4a/d2734af1779523173c60da682b6cd0e7.jpg",
+    "title": "Lalbagh Palace",
+    "paragraph": "The Holkar family resided in the palace up to 1978. After the death of Tukojirao Holkar(III), his granddaughter Usha Raje established a trust and looked after the estate. Later, the former Chief Minister of Madhya Pradesh Arjun Singh brought it under control of State Government.",
+    "images": " https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Lalbagh_Palace%2C_Indore.jpg/330px-Lalbagh_Palace%2C_Indore.jpg",
     "rating": "⭐️⭐️⭐️"
   },
   {
     "id": 12,
-    "title": "Red Lipstick",
-    "paragraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, similique.",
-    "images": "https://i.pinimg.com/736x/3a/f1/64/3af1643d7f7e39926c497e7871a2ba9c.jpg",
+    "title": "Shri Annapurna Temple, Indore",
+    "paragraph": " The Annapurna Temple, besides being a place for pilgrimages is also a tourist attraction. Dedicated to Goddess Annapurna, the deity of food the temple also houses the shrines of Sivan, Hanuman and Kalabhairava.",
+   "images":"https://images.postlo.com/postFiles/20230902/qEGTlQLmor88.jpg",
     "rating": "⭐️⭐️⭐️⭐️"
   }
 ];
@@ -245,7 +245,7 @@ function UI() {
     // Stories  
     const stories = document.createElement('div');
     const storiesTitle = document.createElement('h3');
-    storiesTitle.textContent = "Best Places";
+    storiesTitle.textContent = "Best resorts";
     stories.appendChild(storiesTitle);
     const storiesContainer = document.createElement('div');
     storiesContainer.style.display = 'flex';
