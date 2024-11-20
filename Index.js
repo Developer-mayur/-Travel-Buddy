@@ -86,11 +86,33 @@ let locationList = [
 ];
 
 
-  
+function signin() {
+  let div = document.getElementById("main");
+  div.setAttribute("style", "height:100%; width:50%;background-color:red ; justify-content:centre;align-item:centre");
+
+  let form = `<form>
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>`;
+
+  div.innerHTML = form;   
+}
+
  
 function UI() {
-    //background
-    document.body.style.fontFamily = 'Arial, sans-serif';
+     document.body.style.fontFamily = 'Arial, sans-serif';
     document.body.style.background = 'linear-gradient(135deg, #FEE9E3, #FBDDD4)';
     document.body.style.display = 'flex';
     document.body.style.justifyContent = 'center';
@@ -98,8 +120,7 @@ function UI() {
     document.body.style.minHeight = '100vh';
     document.body.style.margin = '0';
  
-    // Main container display
-    const mainContainer = document.getElementById('main');
+     const mainContainer = document.getElementById('main');
     mainContainer.style.backgroundColor = '#FFFFFF';
     mainContainer.style.width = '90%';
     mainContainer.style.maxWidth = '1200px';
@@ -110,8 +131,7 @@ function UI() {
     mainContainer.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
     mainContainer.style.overflow = 'hidden';
  
-    // Sidebar  left side
-    const sidebar = document.createElement('div');
+     const sidebar = document.createElement('div');
     sidebar.style.backgroundColor = '#F6F6F6';
     sidebar.style.width = '15%';
     sidebar.style.display = 'flex';
@@ -138,8 +158,7 @@ function UI() {
         iconContainer.style.alignItems = 'center';
         iconContainer.style.marginBottom = '20px';
          
-        // Icon properties
-        const iconDiv = document.createElement('div');
+         const iconDiv = document.createElement('div');
 
         iconDiv.textContent = item.icon;
         iconDiv.style.backgroundColor = '#EEEEEE';
@@ -192,8 +211,9 @@ function UI() {
           })
 
         }
-        // Icon label
-        const labelDiv = document.createElement('div');
+
+
+         const labelDiv = document.createElement('div');
         labelDiv.textContent = item.label;
         labelDiv.style.color = '#333';
         labelDiv.style.fontSize = '12px';
@@ -206,8 +226,7 @@ function UI() {
     
     
 
-    //    Main 
-    
+     
     let mainContent = document.createElement('div');
     mainContent.style.flex = '1';
     mainContent.style.padding = '20px';
@@ -219,17 +238,15 @@ function UI() {
    def();
 
      
-    function def(){
-    // header
-    mainContent.innerHTML ="";
+   function def() {
+    mainContent.innerHTML = "";
+
     const header = document.createElement('div');
     header.style.display = 'flex';
     header.style.justifyContent = 'space-between';
     header.style.alignItems = 'center';
     header.style.marginBottom = '20px';
 
-
-    // search
     const searchInput = document.createElement('input');
     searchInput.type = 'text';
     searchInput.placeholder = 'Search...';
@@ -239,214 +256,207 @@ function UI() {
     searchInput.style.borderRadius = '20px';
     header.appendChild(searchInput);
 
-
-
-
-    // Stories  
     const stories = document.createElement('div');
     const storiesTitle = document.createElement('h3');
     storiesTitle.textContent = "Best resorts";
     stories.appendChild(storiesTitle);
+
     const storiesContainer = document.createElement('div');
     storiesContainer.style.display = 'flex';
     storiesContainer.style.flexWrap = 'wrap';
     storiesContainer.style.gap = '10px';
+    stories.appendChild(storiesContainer);
 
-    // Fetch 
-    for (const element of locationList) {
-      let storyDiv = document.createElement('div');  
-      storyDiv.setAttribute("class","card ");
-      storyDiv.setAttribute("style","width: 18rem;");
-  
-      let img = document.createElement("img");
-      img.src = element.images;
-      img.setAttribute("style","height:140px");
-      img.setAttribute("class","card-img-top");
-      storyDiv.appendChild(img);
-      
-      let cbody = document.createElement("div");
-      cbody.setAttribute("class", "card-body d-flex flex-column justify-content-between");
-      storyDiv.appendChild(cbody);
-          
-      let h5 = document.createElement("h5");
-      h5.setAttribute("class","card-title");
-      h5.innerHTML = element.title;
-      cbody.appendChild(h5);
-  
-      let p = document.createElement("p");
-      p.setAttribute("class","card-title");
-      p.innerHTML = element.paragraph;
-      cbody.appendChild(p);
-  
-      
-      let a = document.createElement("a");
-      a.setAttribute("class","btn btn-primary");
-      a.setAttribute("style", "width:  100%");  
-      a.innerHTML = "Visit here";
+     function renderLocations(searchTerm = "") {
+         storiesContainer.innerHTML = "";
 
+         const filteredLocations = locationList.filter(location =>
+            location.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
 
+         for (const element of filteredLocations) {
+            const storyDiv = document.createElement('div');
+            storyDiv.setAttribute("class", "card");
+            storyDiv.setAttribute("style", "width: 18rem;");
 
+            const img = document.createElement("img");
+            img.src = element.images;
+            img.setAttribute("style", "height:140px");
+            img.setAttribute("class", "card-img-top");
+            storyDiv.appendChild(img);
 
-      //new tab
-      a.addEventListener('click', () => {
-         mainContent.innerHTML = "";
-        
-         const detailView = document.createElement('div');
-        detailView.style.padding = '20px';
-        detailView.style.borderRadius = '20px';
-        detailView.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-        detailView.style.backgroundColor = '#ffffff';
-        detailView.style.maxWidth = '400px';
-        detailView.style.margin = '0 auto';
-    
-        // Image
-        const img = document.createElement('img');
-        img.src = element.images;
-        img.style.width = '100%';
-        img.style.height = '200px';
-        img.style.borderTopLeftRadius = '20px';
-        img.style.borderTopRightRadius = '20px';
-        img.style.objectFit = 'fill';
-        detailView.appendChild(img);
-    
+            const cbody = document.createElement("div");
+            cbody.setAttribute("class", "card-body d-flex flex-column justify-content-between");
+            storyDiv.appendChild(cbody);
 
-        
-        const titleSection = document.createElement('div');
-        titleSection.style.padding = '20px';
-    
-        const title = document.createElement('h2');
-        title.textContent = element.title;
-        title.style.margin = '0';
-        title.style.fontSize = '24px';
-        title.style.fontWeight = 'bold';
-        titleSection.appendChild(title);
-    
+            const h5 = document.createElement("h5");
+            h5.setAttribute("class", "card-title");
+            h5.innerHTML = element.title;
+            cbody.appendChild(h5);
 
-        //location
-        const location = document.createElement('p');
-        location.style.display = 'flex';
-        location.style.alignItems = 'center';
-        location.style.color = '#555';
-        location.innerHTML = `<i class="fa fa-map-marker" aria-hidden="true" style="color: blue; margin-right: 5px;"></i> Da Nang, Viet Nam`;
-        titleSection.appendChild(location);
-    
-        // Rating
-        const rating = document.createElement('p');
-        rating.innerHTML =element.rating;
-        titleSection.appendChild(rating);
-    
-        detailView.appendChild(titleSection);
-    
-        // About section
-        const aboutSection = document.createElement('div');
-        aboutSection.style.padding = '0 20px 20px 20px';
-    
-        const aboutTitle = document.createElement('h3');
-        aboutTitle.textContent = 'About';
-        aboutTitle.style.fontSize = '18px';
-        aboutTitle.style.marginBottom = '5px';
-        aboutSection.appendChild(aboutTitle);
-    
-        const aboutText = document.createElement('p');
-        aboutText.textContent = element.paragraph;
-        aboutText.style.fontSize = '14px';
-        aboutText.style.lineHeight = '1.5';
-        aboutSection.appendChild(aboutText);
-    
-        detailView.appendChild(aboutSection);
-    
-        // Including Services
-        const servicesSection = document.createElement('div');
-        servicesSection.style.padding = '0 20px 20px 20px';
-    
-        const servicesTitle = document.createElement('h3');
-        servicesTitle.textContent = 'Including Services';
-        servicesTitle.style.fontSize = '18px';
-        servicesTitle.style.marginBottom = '5px';
-        servicesSection.appendChild(servicesTitle);
-    
-        const servicesText = document.createElement('p');
-        servicesText.textContent = 'Air ticket, train ticket, 3 star hotel, buffet...';
-        servicesText.style.fontSize = '14px';
-        servicesText.style.lineHeight = '1.5';
-        servicesSection.appendChild(servicesText);
-    
-        detailView.appendChild(servicesSection);
-    
-        // Date, Guide, Nights
-        const optionsSection = document.createElement('div');
-        optionsSection.style.display = 'flex';
-        optionsSection.style.justifyContent = 'space-around';
-        optionsSection.style.padding = '10px 20px';
-    
-        const dateOption = document.createElement('div');
-        dateOption.textContent = '16-20 Nov';
-        dateOption.style.backgroundColor = '#f0f0f0';
-        dateOption.style.padding = '5px 10px';
-        dateOption.style.borderRadius = '5px';
-        optionsSection.appendChild(dateOption);
-    
-        const guideOption = document.createElement('div');
-        guideOption.textContent = '3 Tour guide';
-        guideOption.style.backgroundColor = '#f0f0f0';
-        guideOption.style.padding = '5px 10px';
-        guideOption.style.borderRadius = '5px';
-        optionsSection.appendChild(guideOption);
-    
-        const nightsOption = document.createElement('div');
-        nightsOption.textContent = '4 Nights';
-        nightsOption.style.backgroundColor = '#f0f0f0';
-        nightsOption.style.padding = '5px 10px';
-        nightsOption.style.borderRadius = '5px';
-        optionsSection.appendChild(nightsOption);
-    
-        detailView.appendChild(optionsSection);
-    
-        // Price and Book Now button
-        const footerSection = document.createElement('div');
-        footerSection.style.display = 'flex';
-        footerSection.style.justifyContent = 'space-between';
-        footerSection.style.alignItems = 'center';
-        footerSection.style.padding = '20px';
-    
-        const price = document.createElement('p');
-        price.textContent = '';
-        price.style.fontSize = '20px';
-        price.style.fontWeight = 'bold';
-        footerSection.appendChild(price);
-    
-        const bookButton = document.createElement('button');
-        bookButton.textContent = 'BOOK NOW';
-        bookButton.className = 'btn btn-primary';
-        bookButton.style.padding = '10px 20px';
-        footerSection.appendChild(bookButton);
-    
-        detailView.appendChild(footerSection);
-    
-        // Append the detail view to mainContent
-        mainContent.appendChild(detailView);
-    });
-    
-    
-  
-      cbody.appendChild(a);
-      storiesContainer.appendChild(storyDiv);    
-  }
-  
-  stories.appendChild(storiesContainer);
-  mainContent.appendChild(header);
-  mainContent.appendChild(stories);
+            const p = document.createElement("p");
+            p.setAttribute("class", "card-title");
+            p.innerHTML = element.paragraph;
+            cbody.appendChild(p);
+
+            const a = document.createElement("a");
+            a.setAttribute("class", "btn btn-primary");
+            a.setAttribute("style", "width: 100%");
+            a.innerHTML = "Visit here";
+
+            a.addEventListener('click', () => {
+                mainContent.innerHTML = "";
+
+                const detailView = document.createElement('div');
+                detailView.style.padding = '20px';
+                detailView.style.borderRadius = '20px';
+                detailView.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                detailView.style.backgroundColor = '#ffffff';
+                detailView.style.maxWidth = '400px';
+                detailView.style.margin = '0 auto';
+
+                const img = document.createElement('img');
+                img.src = element.images;
+                img.style.width = '100%';
+                img.style.height = '200px';
+                img.style.borderTopLeftRadius = '20px';
+                img.style.borderTopRightRadius = '20px';
+                img.style.objectFit = 'fill';
+                detailView.appendChild(img);
+
+                const titleSection = document.createElement('div');
+                titleSection.style.padding = '20px';
+
+                const title = document.createElement('h2');
+                title.textContent = element.title;
+                title.style.margin = '0';
+                title.style.fontSize = '24px';
+                title.style.fontWeight = 'bold';
+                titleSection.appendChild(title);
+
+                const location = document.createElement('p');
+                location.style.display = 'flex';
+                location.style.alignItems = 'center';
+                location.style.color = '#555';
+                location.innerHTML = `<i class="fa fa-map-marker" aria-hidden="true" style="color: blue; margin-right: 5px;"></i> Da Nang, Viet Nam`;
+                titleSection.appendChild(location);
+
+                const rating = document.createElement('p');
+                rating.innerHTML = element.rating;
+                titleSection.appendChild(rating);
+
+                detailView.appendChild(titleSection);
+
+                const aboutSection = document.createElement('div');
+                aboutSection.style.padding = '0 20px 20px 20px';
+
+                const aboutTitle = document.createElement('h3');
+                aboutTitle.textContent = 'About';
+                aboutTitle.style.fontSize = '18px';
+                aboutTitle.style.marginBottom = '5px';
+                aboutSection.appendChild(aboutTitle);
+
+                const aboutText = document.createElement('p');
+                aboutText.textContent = element.paragraph;
+                aboutText.style.fontSize = '14px';
+                aboutText.style.lineHeight = '1.5';
+                aboutSection.appendChild(aboutText);
+
+                detailView.appendChild(aboutSection);
+
+                const servicesSection = document.createElement('div');
+                servicesSection.style.padding = '0 20px 20px 20px';
+
+                const servicesTitle = document.createElement('h3');
+                servicesTitle.textContent = 'Including Services';
+                servicesTitle.style.fontSize = '18px';
+                servicesTitle.style.marginBottom = '5px';
+                servicesSection.appendChild(servicesTitle);
+
+                const servicesText = document.createElement('p');
+                servicesText.textContent = 'Air ticket, train ticket, 3 star hotel, buffet...';
+                servicesText.style.fontSize = '14px';
+                servicesText.style.lineHeight = '1.5';
+                servicesSection.appendChild(servicesText);
+
+                detailView.appendChild(servicesSection);
+
+                const optionsSection = document.createElement('div');
+                optionsSection.style.display = 'flex';
+                optionsSection.style.justifyContent = 'space-around';
+                optionsSection.style.padding = '10px 20px';
+
+                const dateOption = document.createElement('div');
+                dateOption.textContent = '16-20 Nov';
+                dateOption.style.backgroundColor = '#f0f0f0';
+                dateOption.style.padding = '5px 10px';
+                dateOption.style.borderRadius = '5px';
+                optionsSection.appendChild(dateOption);
+
+                const guideOption = document.createElement('div');
+                guideOption.textContent = '3 Tour guide';
+                guideOption.style.backgroundColor = '#f0f0f0';
+                guideOption.style.padding = '5px 10px';
+                guideOption.style.borderRadius = '5px';
+                optionsSection.appendChild(guideOption);
+
+                const nightsOption = document.createElement('div');
+                nightsOption.textContent = '4 Nights';
+                nightsOption.style.backgroundColor = '#f0f0f0';
+                nightsOption.style.padding = '5px 10px';
+                nightsOption.style.borderRadius = '5px';
+                optionsSection.appendChild(nightsOption);
+
+                detailView.appendChild(optionsSection);
+
+                const footerSection = document.createElement('div');
+                footerSection.style.display = 'flex';
+                footerSection.style.justifyContent = 'space-between';
+                footerSection.style.alignItems = 'center';
+                footerSection.style.padding = '20px';
+
+                const price = document.createElement('p');
+                price.textContent = '';
+                price.style.fontSize = '20px';
+                price.style.fontWeight = 'bold';
+                footerSection.appendChild(price);
+
+                const bookButton = document.createElement('button');
+                bookButton.textContent = 'BOOK NOW';
+                bookButton.className = 'btn btn-primary';
+                bookButton.style.padding = '10px 20px';
+                footerSection.appendChild(bookButton);
+
+                detailView.appendChild(footerSection);
+
+                mainContent.appendChild(detailView);
+            });
+
+            cbody.appendChild(a);
+            storiesContainer.appendChild(storyDiv);
+        }
     }
+
+     searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value;
+        renderLocations(searchTerm);
+    });
+
+     renderLocations();
+
+    mainContent.appendChild(header);
+    mainContent.appendChild(stories);
+}
 
 
 
 
     function News() {
-      mainContent.innerHTML = "";  
-    let div = document.createElement('div');
+       mainContent.innerHTML = "";  
+  
+       let div = document.createElement('div');
       
-      // Country Dropdown
-      let s = document.createElement('div');
+       let s = document.createElement('div');
       s.innerHTML = `<select id="country-select">
           <option value="in">India</option>
           <option value="us">USA</option>
@@ -457,8 +467,7 @@ function UI() {
       </select>`;
       div.appendChild(s);
       
-      // Category Dropdown
-      let c = document.createElement('div');
+       let c = document.createElement('div');
       c.innerHTML = `<select id="category-select">
           <option value="general">General</option>
           <option value="business">Business</option>
@@ -469,93 +478,109 @@ function UI() {
           <option value="technology">Technology</option>
       </select>`;
       div.appendChild(c);
-      div.setAttribute("style","border:1px solid;display:flex;")
-       mainContent.appendChild(div);
-
-
-    
+  
+       div.setAttribute("style", "  display: flex; gap: 10px; padding: 10px;");
+      mainContent.appendChild(div);
+  
        function fetchNews() {
-        const category = document.getElementById('category-select').value; // Get selected category
-        const country = document.getElementById('country-select').value; // Get selected country
-        
-        const url = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`;
-    
-        // Fetch the news
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            if (data.status === 'ok') {
-              displayResults(data.articles); // Display the articles if the API request is successful
-            } else {
-              displayResults([]); // Display empty if no articles are found
-            }
-          })
-          .catch(error => {
-            console.error('Error fetching the news:', error);
-            displayResults([]); // Display empty results on error
-          });
+          const category = document.getElementById('category-select').value;  
+          const country = document.getElementById('country-select').value;  
+          
+          const url = `https://saurav.tech/NewsAPI/top-headlines/category/${category}/${country}.json`;
+  
+          fetch(url)
+              .then(response => response.json())
+              .then(data => {
+                  if (data.status === 'ok') {
+                      displayResults(data.articles); 
+                  } else {
+                      displayResults([]); 
+                  }
+              })
+              .catch(error => {
+                  console.error('Error fetching the news:', error);
+                  displayResults([]);  
+              });
       }
-    
-      // Function to display the articles
-      function displayResults(articles) {
-        const resultsContainer = document.createElement('div');
-        resultsContainer.style.display = "flex";
-        resultsContainer.style.flexDirection = "column";
-        resultsContainer.style.gap = '10px';
-    
-        if (articles.length === 0) {
-          resultsContainer.innerHTML = 'No results found.';
-        } else {
-          articles.forEach(article => {
-            const articleDiv = document.createElement('div');
-            articleDiv.style.border = '1px solid #ddd';
-            articleDiv.style.padding = '10px';
-            articleDiv.style.borderRadius = '8px';
-            articleDiv.setAttribute("style","width:400px;border:1px solid;")
+  
+       function displayResults(articles) {
+           const resultsContainer = document.createElement('div');
+          resultsContainer.style.display = "flex";
+          resultsContainer.style.flexWrap = "wrap";
+          resultsContainer.style.gap = '10px';
 
-     
-            const title = document.createElement('h5');
-            title.textContent = article.title;
-            articleDiv.appendChild(title);
-    
-            if (article.urlToImage) {
-              const img = document.createElement('img');
-              img.src = article.urlToImage;
-              img.style.height = '140px';
-              img.style.width = '100%';
-              img.style.objectFit = 'cover';
-              articleDiv.appendChild(img);
-            }
-    
-             
+           resultsContainer.style.marginTop = "20px";
+  
+          if (articles.length === 0) {
+              resultsContainer.innerHTML = 'No results.';
+          } else {
+              articles.forEach(article => {
+                  let articleDiv = document.createElement('div');
+                  articleDiv.setAttribute("class", "card");
+                  articleDiv.style.width = "18rem";
+                  articleDiv.style.border = "1px solid #ddd";
+                  articleDiv.style.borderRadius = "8px";
+                  articleDiv.style.overflow = "hidden";
+                  articleDiv.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+  
+                  if (article.urlToImage) {
+                      let img = document.createElement("img");
+                      img.src = article.urlToImage;
+                      img.setAttribute("class", "card-img-top");
+                      img.style.width = "100%";
+                      img.style.height = "140px";
+                      img.style.objectFit = "cover";
+                      articleDiv.appendChild(img);
+                  }
+  
+                   
 
-            const link = document.createElement('a');
-            link.href = article.url;
-            link.target = '_blank';
-            link.textContent = 'Read More';
-            articleDiv.appendChild(link);
-    
-            resultsContainer.appendChild(articleDiv);
-          });
-        }
-        resultsContainer.setAttribute("style","display:flex;  flex-wrap: wrap;")
-         mainContent.innerHTML = '';   
-        mainContent.appendChild(div);   
-        mainContent.appendChild(resultsContainer);   
+                  const cbody = document.createElement("div");
+                  cbody.setAttribute("class", "card-body d-flex flex-column justify-content-between");
+                  cbody.style.padding = "10px";
+          
+  
+                  const title = document.createElement('h5');
+                  title.setAttribute("class", "card-title");
+                  title.textContent = article.title;
+                  title.style.fontSize = "16px";
+                  title.style.marginBottom = "10px";
+                  cbody.appendChild(title);
+  
+                  const link = document.createElement('a');
+                  link.href = article.url;
+                  link.target = '_blank';
+                  link.textContent = 'Read More';
+                  link.setAttribute("class", "btn btn-primary");
+                  
+                  link.style.display = "block";
+                  link.style.textAlign = "center";
+                  link.style.backgroundColor = "#007bff";
+                  link.style.color = "#fff";
+                  link.style.padding = "8px";
+                  link.style.borderRadius = "4px";
+                  link.style.textDecoration = "none";
+                  link.setAttribute("style", "width: 100%");
+
+                  cbody.appendChild(link);
+  
+                   articleDiv.appendChild(cbody);
+                  resultsContainer.appendChild(articleDiv);
+              });
+          }
+  
+           mainContent.innerHTML = "";  
+          mainContent.appendChild(div);  
+          mainContent.appendChild(resultsContainer);  
       }
-    
+  
        document.getElementById('country-select').addEventListener('change', fetchNews);
       document.getElementById('category-select').addEventListener('change', fetchNews);
-    
-       fetchNews();
-    }
-    
-    
-    mainContainer.appendChild(sidebar);
-    mainContainer.appendChild(mainContent);
-    
   
-
-
- 
-}
+       fetchNews();
+  }
+  
+   mainContainer.appendChild(sidebar);
+  mainContainer.appendChild(mainContent);
+}  
+     
